@@ -1,0 +1,8 @@
+---
+title: "Analy 510 52 Assignment 7"
+author: "Team 3-Chak Lam Cheong, Minglu Li,Haotian Pei,Ruoxi Pei,Meiyao Li,Peng Gong"
+date: "December 17, 2017"
+output: html_document
+---
+
+
