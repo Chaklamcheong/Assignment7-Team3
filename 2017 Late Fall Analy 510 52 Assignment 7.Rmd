@@ -73,5 +73,45 @@ head(data_with_Area)
 
 ```
 
+#Ruoxi Pei
+```{r}
+install.packages("gsubfn")
+
+library('gsubfn')
+
+```
+
+```{r}
+
+
+Address1  <- c("Lane", "Road", "Avenue", "Green", "Hospital", "Village", "Center", "Drive", "Circle", "Park","Street")
+Address2 <- c("Lan.",  "Rd.", "Ave.", "Gr.","Hosp.","Vil.","Ctr.", "Dr.", "Cr.","Pk.","Str.")
+
+data_with_Area$Street <- gsub("Lane","Lan.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Road|road|Raod","Rd.", data_with_Area$Street)
+data_with_Area$Street <- gsub("AVenue","Ave.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Green","Gr.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Hospital","Hosp.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Village","Vil.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Center","Ctr.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Drive","Dr.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Circle","Cr.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Park","Pk.", data_with_Area$Street)
+data_with_Area$Street <- gsub("Street","Str.", data_with_Area$Street)
+
+data_with_Area$Street.2 <- gsub("Lane","Lan.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Road|road|Raod","Rd.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("AVenue","Ave.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Green","Gr.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Hospital","Hosp.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Village","Vil.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Center","Ctr.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Drive","Dr.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Circle","Cr.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Park","Pk.", data_with_Area$Street.2)
+data_with_Area$Street.2 <- gsub("Street","Str.", data_with_Area$Street.2)
+data_with_Area
+
+```
 
 
