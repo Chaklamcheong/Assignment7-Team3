@@ -4,5 +4,41 @@ author: "Team 3-Chak Lam Cheong, Minglu Li,Haotian Pei,Ruoxi Pei,Meiyao Li,Peng 
 date: "December 17, 2017"
 output: html_document
 ---
+#Peng Gong
+## Populate the missing values in the Area variable with an appropriate values (Birmingham, Coventry, Dudley, Sandwell, Solihull, Walsall or Wolverhampton)
+```{r}
+library(tidyr)
+
+Dirty_dataframe<-read.csv("C:/Users/Peng/Desktop/Harrisburg/ANLY 510 52/Dirty_Data.csv")
+
+```
+
+
+
+```{r}
+colnames(Dirty_dataframe)
+```
+
+```{r}
+str(Dirty_dataframe)
+```
+
+
+
+
+```{r}
+head(Dirty_dataframe)
+```
+
+```{r}
+library(tidyr)
+
+Dirty_dataframe[Dirty_dataframe =="" ] <- NA
+data_with_Area<-fill(Dirty_dataframe, "Area", .direction = c("down"))
+
+head(data_with_Area)
+
+```
+
 
 
