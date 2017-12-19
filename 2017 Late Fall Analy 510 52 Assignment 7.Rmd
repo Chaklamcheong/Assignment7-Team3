@@ -22,6 +22,39 @@ colnames(Dirty_dataframe)
 ```{r}
 str(Dirty_dataframe)
 ```
+#Meiyao Li
+## Remove special characters, padding (the white space before and after the text) from Street 1 and Street 2 variables. Make sure the first letters of street names are capitalized and the street denominations are following the same standard (for example, all streets are indicated as "str.", avenues as "ave.", etc.
+
+
+
+```{r}
+data_with_Area$Street = gsub("[^A-Za-z ]", " ",data_with_Area$Street)
+
+data_with_Area$Street = gsub("(?<=[\\s])\\s*|^\\s+|\\s+$", "", data_with_Area$Street, perl=TRUE)
+
+head(data_with_Area)
+
+```
+
+
+```{r}
+
+data_with_Area$Street.2 = gsub("[^A-Za-z ]", " ",data_with_Area$Street.2)
+
+data_with_Area$Street.2 = gsub("(?<=[\\s])\\s*|^\\s+|\\s+$", "", data_with_Area$Street.2, perl=TRUE)
+
+head(data_with_Area)
+
+```
+
+```{r}
+
+data_with_Area$Street = gsub("(^|[[:space:]])([[:alpha:]])", "\\1\\U\\2", data_with_Area$Street, perl=TRUE)
+data_with_Area$Street.2 =  gsub("(^|[[:space:]])([[:alpha:]])", "\\1\\U\\2", data_with_Area$Street.2, perl=TRUE)
+
+head(data_with_Area)
+
+```
 
 
 
