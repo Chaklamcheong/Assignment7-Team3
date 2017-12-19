@@ -140,3 +140,12 @@ View(data_with_Area)
 
 ```
 
+#HaoTian Pei
+## Remove the "Strange HTML column"
+
+```{r}
+data_with_Area = subset(data_with_Area[,1:4])
+head(data_with_Area)
+
+
+```
