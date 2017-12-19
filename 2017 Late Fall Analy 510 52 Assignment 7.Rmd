@@ -114,4 +114,29 @@ data_with_Area
 
 ```
 
+#Minglu Li
+## If the value in Street 2 duplicates the value in Street 1, remove the value in Street 2
+
+
+
+
+
+```{r}
+
+i = 1
+
+while(i < nrow(data_with_Area )) 
+{
+  if(data_with_Area$Street[i] == data_with_Area$Street.2 [i]) 
+  {
+    data_with_Area$Street.2 [i] = ""
+  }
+  i = i+1
+}
+
+data_with_Area
+
+View(data_with_Area)
+
+```
 
